@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Exercício 08</title>
 </head>
 
@@ -15,18 +16,19 @@
 
             <h1>Palíndromo</h1>
 
-            <p class="text">
-                Indentifique se uma palavra é<br>
-                um palíndromo ou não
-            </p>
-
             <input type="text" placeholder="Insira uma plavra" id="palavra">
 
-            <button onclick="check()">Check</button>
+            <button onclick="palindromo()">Check</button>
 
             <p id="resultado"></p>
 
         </section>
+
+        <p class="obs">
+            Obs: Um Palíndromo é uma palavra que pode ser<br>
+            lida da mesma forma da esquerda para a direita<br>
+            e vice-versa
+        </p>
 
     </main>
 

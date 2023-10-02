@@ -1,18 +1,12 @@
-let palavra = document.getElementById("palavra").toLowerCase();
+function palindromo() {
 
-function check(palavra) {
+    let palavra = String(document.getElementById("palavra").value).toLowerCase();
 
-    let RegExp = /[^a-zA-Z]/g;
+    let inversePalav = palavra.split("").reverse().join("");
 
-    let formatPalav = palavra.replace(RegExp, "");
-
-    let inversePalav = formatPalav.split("").reverse().join("");
-
-    return formatPalav === inversePalav;
-}
-
-if (check(palavra)) {
-    document.getElementById("resultado").innerHTML = `A palavra ${palavra} é um palíndromo.`;
-} else {
-    document.getElementById("resultado").innerHTML = `A palavra ${palavra} não é um palíndromo.`;
+    if (palavra === inversePalav) {
+        document.getElementById("resultado").innerHTML = `'${palavra}' é um palíndromo.`;
+    } else {
+        document.getElementById("resultado").innerHTML = `'${palavra}' não é um palíndromo.`;
+    }
 }
