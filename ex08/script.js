@@ -1,6 +1,6 @@
 let palavra = document.getElementById("palavra").toLowerCase();
 
-function palindromo() {
+function check(palavra) {
 
     let RegExp = /[^a-zA-Z]/g;
 
@@ -11,7 +11,7 @@ function palindromo() {
     return formatPalav === inversePalav;
 }
 
-if (palindromo()) {
+if (check(palavra)) {
     document.getElementById("resultado").innerHTML = `A palavra ${palavra} é um palíndromo.`;
 } else {
     document.getElementById("resultado").innerHTML = `A palavra ${palavra} não é um palíndromo.`;
