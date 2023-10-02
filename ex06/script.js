@@ -1,6 +1,6 @@
 function media() {
 
-    let soma = "";
+    let soma = 0;
     let contagem = 0;
     let continuar = "sim" || "nao";
 
@@ -8,15 +8,15 @@ function media() {
 
         let numero = parseInt(prompt("Insira um número"));
 
-        contagem++;
-        
-        soma = numero + numero;
 
         continuar = prompt("Deseja continuar?").toLowerCase();
+        
+        soma += numero;
+        contagem++;
     }
 
     let media = soma / contagem;
 
-    alert("Contagem: " + contagem + " Soma: " + soma + " Media" + media);
+    alert("O total dos números inseridos é " + soma + " e sua média é " + media);
 
 }
