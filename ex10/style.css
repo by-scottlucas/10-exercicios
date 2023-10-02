@@ -31,6 +31,11 @@
     background-color: whitesmoke;
 }
 
+.layout img{
+    width: 60px;
+    margin-bottom: 10px;
+}
+
 .layout h1 {
     color: steelblue;
     font-size: 1.6rem;

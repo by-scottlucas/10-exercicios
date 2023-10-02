@@ -24,6 +24,11 @@
     background-color:whitesmoke;
 }
 
+.layout img{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
 .layout h1{
     color: steelblue;
     font-size: 1.6rem;
