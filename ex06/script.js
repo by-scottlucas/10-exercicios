@@ -17,6 +17,6 @@ function media() {
 
     let media = soma / contagem;
 
-    alert("O total dos números inseridos é " + soma + " e sua média é " + media);
+    alert("A soma dos números inseridos é " + soma + " e sua média é " + media);
 
 }
