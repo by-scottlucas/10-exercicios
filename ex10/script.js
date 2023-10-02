@@ -1,25 +1,27 @@
 function advinhe() {
 
-    let numPensado = Math.round(Math.random() * 100);
+    var numPensado = Math.round(Math.random() * 10);
 
-    for (let i = 1; i <= 3 ; i++) {
+    var numDaTentativa = 1;
 
-        tentativas = 3-i;
+    alert('Eu penso em um numero, e você tenta advinhar, Ok?')
 
-        let chute = parseInt(document.getElementById("num").value);
+    while (numDaTentativa <= 3) {
+        var chute = prompt('Já pensei, Qual você acha que é?')
 
         if (chute == numPensado) {
-            document.getElementById("resultado").innerHTML = `Acertou!!! O numero que pensei foi mesmo o ${numPensado}`;
+            alert('Acertou!!! O numero que pensei foi mesmo o ' + numPensado);
             break;
         }
-
         else {
-            document.getElementById("resultado").innerHTML = `Voce errou. Tente novamente. Tentativas${tentativas}`;
+            alert('Voce errou. Tente mais uma vez.');
         }
 
-        if (tentativas >= 3 && chute != numPensado) {
-            document.getElementById("resultado").innerHTML = `Game-Over.<br> O numero que pensei foi o ${numPensado}`;
+        if (numDaTentativa >= 3) {
+            alert('Game-Over. O numero que pensei foi o ' + numPensado);
         }
+
+        numDaTentativa++;
     }
 
 }

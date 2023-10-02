@@ -1,15 +1,18 @@
-function contagem(){
+function contagem() {
 
-    let num = "";
+    let num = parseInt(document.getElementById('num').value);
 
-    console.log("Iniciando contagem...");
+    const intervalo = setInterval(function () {
 
-    for (let num = 10; num >= 0; num--) {
-        console.log(num);
-        console.log("...");
-    }
+        if (num === 0) {
+            clearInterval(intervalo);
 
-    console.log("Timer zerado!");
+            document.getElementById("msg").innerHTML = "Timer zerado.";
+        } else {
+            document.getElementById('timer').innerHTML = num;
+
+            num--;
+        }
+
+    }, 1000);
 }
-
-contagem();
